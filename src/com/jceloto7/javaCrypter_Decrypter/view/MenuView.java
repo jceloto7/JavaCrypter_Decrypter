@@ -1,4 +1,4 @@
-// apply multithreading
+// catch by input (screen) the folder and the key and create the output folder based in input folder
 
 package com.jceloto7.javaCrypter_Decrypter.view;
 
@@ -25,6 +25,7 @@ public class MenuView {
         option = inputUtil.getInput();
         validation = validationUtil.validation1or2(option);
         optionFinal = mismatchCorrectionUtil.retype1or2(validation,option);
+
 
 
 
