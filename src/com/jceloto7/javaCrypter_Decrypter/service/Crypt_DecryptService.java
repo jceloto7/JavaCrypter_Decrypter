@@ -6,9 +6,11 @@ import com.jceloto7.javaCrypter_Decrypter.Bootstrap;
 import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
 
 public class Crypt_DecryptService {
-    private final Crypter crypter = Bootstrap.crypter;
+    private static final Crypter crypter = Bootstrap.crypter;
+    private static final Semaphore semaphore = new Semaphore(Runtime.getRuntime().availableProcessors());
     public long startTime = System.currentTimeMillis();
     public String[] process = new String[0];
     public String key = process[1];
@@ -25,14 +27,17 @@ public class Crypt_DecryptService {
         }
         for (File file : files) {
             if (file.isFile()) {
-                executor.execute(() -> {
+                new Thread(()-> {
                     try {
+                        semaphore.acquire();
                         crypter.cryptFile(key, file.getAbsolutePath(), encryptedFolder.getAbsolutePath() +
                                 File.separator + file.getName() + ".crypt");
                     } catch (Exception ex) {
                         System.out.println("An unexpected error has occured. Please try again ");
+                    } finally {
+                        semaphore.release();
                     }
-                });
+                }).start();
             }
         }
 
@@ -56,14 +61,17 @@ public class Crypt_DecryptService {
         }
         for (File file : files) {
             if (file.isFile()) {
-                executor.execute(() -> {
+                new Thread(() -> {
                     try {
+                        semaphore.acquire();
                         crypter.decryptFile(key, file.getAbsolutePath(), decryptedFolder.getAbsolutePath() +
                                 File.separator + file.getName().replaceAll(".crypt", ""));
                     } catch (Exception ex) {
                         System.out.println("An unexpected error has occured. Please try again ");
+                    }finally {
+                        semaphore.release();
                     }
-                });
+                }).start();
             }
         }
 

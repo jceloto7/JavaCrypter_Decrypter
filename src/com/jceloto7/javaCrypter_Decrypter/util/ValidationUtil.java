@@ -1,7 +1,6 @@
 package com.jceloto7.javaCrypter_Decrypter.util;
 
-import static com.jceloto7.javaCrypter_Decrypter.Bootstrap.inputUtil;
-
+import java.io.File;
 public class ValidationUtil {
     public boolean validation1or2(String input) {
         char[] option = input.toCharArray();
@@ -12,4 +11,8 @@ public class ValidationUtil {
 
     }
 
+    public boolean validationFolder(String input){
+        File folder = new File(input);
+        return folder.exists() && folder.isDirectory();
+    }
 }

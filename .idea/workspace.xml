@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97a5152e-9e41-4076-891e-cc6c4bc5b07c" name="Changes" comment="bootstrap and crypt/decrypt logics finished">
+    <list default="true" id="97a5152e-9e41-4076-891e-cc6c4bc5b07c" name="Changes" comment="crypt/decrypt logics with multithreading and  &#10;time counts finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/service/Crypt_DecryptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/service/Crypt_DecryptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/MismatchCorrectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/MismatchCorrectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/ValidationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/ValidationUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/view/MenuView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,11 +76,20 @@
       <option name="project" value="LOCAL" />
       <updated>1708619870362</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="crypt/decrypt logics with multithreading and  &#10;time counts finished">
+      <option name="closed" value="true" />
+      <created>1709298417720</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709298417720</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bootstrap and crypt/decrypt logics finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap and crypt/decrypt logics finished" />
+    <MESSAGE value="crypt/decrypt logics with multithreading and  &#10;time counts finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="crypt/decrypt logics with multithreading and  &#10;time counts finished" />
   </component>
 </project>
