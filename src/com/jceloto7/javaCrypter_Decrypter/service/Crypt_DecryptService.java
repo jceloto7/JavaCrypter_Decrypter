@@ -17,6 +17,7 @@ public class Crypt_DecryptService {
     public ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     public void crypt(String key, String inputFile,String outputFile) {
+
         crypter.cryptFile(key, inputFile, outputFile);
         File encryptedFolder = new File(outputFile + File.separator + "Encrypted");
         encryptedFolder.mkdirs();
@@ -25,6 +26,7 @@ public class Crypt_DecryptService {
         if (files == null || files.length == 0) {
             System.out.println("Nenhum arquivo encontrado na pasta especificada.");
         }
+        assert files != null;
         for (File file : files) {
             if (file.isFile()) {
                 new Thread(()-> {
@@ -59,19 +61,22 @@ public class Crypt_DecryptService {
         if (files == null || files.length == 0) {
             System.out.println("Nenhum arquivo encontrado na pasta especificada.");
         }
+        assert files != null;
         for (File file : files) {
-            if (file.isFile()) {
+            if (file.isFile() &&file.getName().endsWith(".crypt")) {
                 new Thread(() -> {
                     try {
                         semaphore.acquire();
                         crypter.decryptFile(key, file.getAbsolutePath(), decryptedFolder.getAbsolutePath() +
                                 File.separator + file.getName().replaceAll(".crypt", ""));
                     } catch (Exception ex) {
-                        System.out.println("An unexpected error has occured. Please try again ");
+                        System.out.println("An unexpected error has occurred. Please try again ");
                     }finally {
                         semaphore.release();
                     }
                 }).start();
+            }else{
+                System.out.println("This folder is not crypt.");
             }
         }
 

@@ -1,5 +1,3 @@
-// catch by input (screen) the folder and the key and create the output folder based in input folder
-
 package com.jceloto7.javaCrypter_Decrypter.view;
 
 import com.jceloto7.javaCrypter_Decrypter.Bootstrap;
@@ -7,6 +5,8 @@ import com.jceloto7.javaCrypter_Decrypter.service.Crypt_DecryptService;
 import com.jceloto7.javaCrypter_Decrypter.util.InputUtil;
 import com.jceloto7.javaCrypter_Decrypter.util.MismatchCorrectionUtil;
 import com.jceloto7.javaCrypter_Decrypter.util.ValidationUtil;
+
+import java.util.Objects;
 
 public class MenuView {
 
@@ -31,15 +31,25 @@ public class MenuView {
         option = inputUtil.getInput();
         validation = validationUtil.validation1or2(option);
         optionFinal = mismatchCorrectionUtil.retype1or2(validation,option);
-        if(optionFinal =="1"){
+        if(Objects.equals(optionFinal, "1")){
             System.out.println("What folder do you want to crypt?");
             folderPath = inputUtil.getInput();
             validation = validationUtil.validationFolder(folderPath);
             inputFinal = mismatchCorrectionUtil.retypeFolder(validation,folderPath);
-            outputFinal = inputFinal + "/crypt";
+            outputFinal = inputFinal + "/Encrypted";
             System.out.println("Great! Now, create a key/password");
             key = inputUtil.getInput();
             cryptDecryptService.crypt(key,inputFinal,outputFinal);
+        }else{
+            System.out.println("What folder do you want to decrypt?");
+            folderPath = inputUtil.getInput();
+            validation = validationUtil.validationFolder(folderPath);
+            inputFinal = mismatchCorrectionUtil.retypeFolder(validation,folderPath);
+            outputFinal = inputFinal + "/Decrypted";
+            System.out.println("Now,type the crypt key.");
+            key = inputUtil.getInput();
+
+
         }
 
 

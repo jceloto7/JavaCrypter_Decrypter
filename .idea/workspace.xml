@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97a5152e-9e41-4076-891e-cc6c4bc5b07c" name="Changes" comment="crypt/decrypt logics with multithreading and  &#10;time counts finished">
+    <list default="true" id="97a5152e-9e41-4076-891e-cc6c4bc5b07c" name="Changes" comment="add semaphore, and input catch at menu">
+      <change afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/CalculateUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/service/Crypt_DecryptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/service/Crypt_DecryptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/MismatchCorrectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/MismatchCorrectionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/ValidationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/util/ValidationUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jceloto7/javaCrypter_Decrypter/view/MenuView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,12 +82,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709298417720</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add semaphore, and input catch at menu">
+      <option name="closed" value="true" />
+      <created>1709561411265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709561411265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bootstrap and crypt/decrypt logics finished" />
     <MESSAGE value="crypt/decrypt logics with multithreading and  &#10;time counts finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="crypt/decrypt logics with multithreading and  &#10;time counts finished" />
+    <MESSAGE value="add semaphore, and input catch at menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="add semaphore, and input catch at menu" />
   </component>
 </project>
